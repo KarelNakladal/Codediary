@@ -16,9 +16,9 @@ final class RouterFactory
     {
         $router = new RouteList;
         $router->addRoute('<module>/<presenter>/<action>[/<id \d+>]', [
-            'module' => 'Google',
-            'presenter' => 'Login',
-            'action' => 'in',
+            'module' => 'Login',
+            'presenter' => 'Homepage',
+            'action' => 'default',
         ]);
         return $router;
     }
