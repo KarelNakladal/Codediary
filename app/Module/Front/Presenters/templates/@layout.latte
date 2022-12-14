@@ -9,6 +9,28 @@
 	<link href="{$basePath}/css/Bootstrap.css" rel="stylesheet">
 	<link href="{$basePath}/css/Front.css" rel="stylesheet">
 
+	<script>
+        const html = document.getElementsByTagName("html")[0]
+        let darkTheme = {if $theme == "light-theme"}false{else}true{/if};
+        window.addEventListener("load", () => {
+            document.getElementById("dark-theme-toggle").addEventListener("click", () => {
+                darkTheme = !darkTheme
+                fetch("?do=changeTheme")
+                toggleDarkTheme(darkTheme)
+            });
+            html.classList = document.getElementById("theme-container").classList;
+        })
+        const toggleDarkTheme = (darkMode) => {
+            const themeContainer = document.getElementById("theme-container");
+            if (themeContainer != null) {
+                themeContainer.classList.toggle("light-theme", !darkMode);
+                themeContainer.classList.toggle("dark-theme", darkMode);
+            }
+            html.classList = themeContainer.classList;
+        }
+        window.addEventListener('load', () => feather.replace())
+    </script>
+
 </head>
 
 <body id="theme-container" class="col-12 pm-0 {$theme} main-background">
