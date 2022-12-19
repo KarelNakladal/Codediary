@@ -2,14 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace App\Module\Login\Presenters;
+namespace App\Module\Front\Presenters;
 
-use App\Module\Front\Presenters\BaseLoginPresenter;
-use Nette;
-use Nette\Application\UI\Form;
-use App\Model\UserFacade;
+use App\Module\Front\Presenters\BaseFrontPresenter;
 
-final class HomepagePresenter extends BaseLoginPresenter{
+final class HomepagePresenter extends BaseFrontPresenter{
 
 
 }

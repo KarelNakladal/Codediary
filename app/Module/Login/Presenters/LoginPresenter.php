@@ -4,8 +4,7 @@ declare(strict_types = 1);
 
 namespace App\Module\Login\Presenters;
 
-use App\Module\Front\Presenters\BaseLoginPresenter;
-use Nette;
+use App\Module\Login\Presenters\BaseLoginPresenter;
 use Nette\Application\UI\Form;
 use App\Model\UserFacade;
 
@@ -17,7 +16,6 @@ final class LoginPresenter extends BaseLoginPresenter{
 	{
 		$this->userFacade = $userFacade;
 	}
-
 
     public function renderDefault(){
 
@@ -37,7 +35,8 @@ final class LoginPresenter extends BaseLoginPresenter{
     }
 
     public function onSuccessLogin(Form $form, \stdClass $data){
-        $this->userFacade->authenticate($data->username, $data->password);
+        $this->user->login($data->username, $data->password);
+        $this->redirect(":Front:Homepage:default");
     }
 
     public function createComponentRegisterForm(){
@@ -62,6 +61,7 @@ final class LoginPresenter extends BaseLoginPresenter{
             $this->flashMessage("Hesla se neschodují","alert");
         }else{
             $this->userFacade->add($data->username, $data->email, $data->password);
+            $this->redirect(":Front:Homepage:");
         }
     }
 }

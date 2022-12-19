@@ -35,6 +35,13 @@
 
 <body id="theme-container" class="col-12 pm-0 {$theme} main-background">
 
+<nav>
+    <a n:href="Homepage:">Domů</a>
+    <a n:href="Dashboard:">Portfolio</a>
+    <a n:href="Dashboard:new">Nový záznam</a>
+</nav>
+
+
 	<div class="container">
 		<div n:foreach="$flashes as $flash" n:class="alert, 'alert-' . $flash->type"><div class="col-3 f-0 bor-round flashmsg ma inverted-text-collor inverted-cell-background">{$flash->message}</div></div>
 		{include content}

@@ -1,5 +1,5 @@
 <?php
-namespace App\Module\Front\Presenters;
+namespace App\Module\Login\Presenters;
 
 use Nette\Application\UI\Presenter;
 use Nette\Http\Session;
@@ -16,7 +16,7 @@ abstract class BaseLoginPresenter extends Presenter {
 
         parent::beforeRender();
         if($this->user->isLoggedIn()){
-            $this->redirect(":Front:Homepage:");
+           // $this->redirect(":Front:Homepage:");
         }
     }
 
