@@ -33,14 +33,13 @@
 
 </head>
 
-<body id="theme-container" class="col-12 pm-0 {$theme} main-background">
-
+<body id="theme-container" class="col-12 pm-0">
+<header>
 <nav>
-    <a n:href="Homepage:">Domů</a>
-    <a n:href="Dashboard:">Portfolio</a>
-    <a n:href="Dashboard:new">Nový záznam</a>
+    <a n:href="Homepage:default"><button>Domů</button></a>
+    <a n:href="Homepage:new"><button>Nový záznam</button></a>
 </nav>
-
+</header>
 
 	<div class="container">
 		<div n:foreach="$flashes as $flash" n:class="alert, 'alert-' . $flash->type"><div class="col-3 f-0 bor-round flashmsg ma inverted-text-collor inverted-cell-background">{$flash->message}</div></div>

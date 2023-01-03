@@ -1,1 +1,19 @@
 {block content}
+
+<div class="posts">
+{if $posts != null}
+    {foreach $posts as $post}
+        <div class="post">
+            {$post["language"]}
+            {$post["rating"]}
+            {$post["time"]}
+            {$post["datetime"]}
+            {$post["description"]}
+            <a n:href="deletePost! $post['id']">vymazat</a>
+            <a n:href="Edit:edit $post['id']">upravit</a>
+        </div>
+    {/foreach}
+{else}
+napište nový záznam
+{/if}
+</div>

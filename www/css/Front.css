@@ -1,0 +1,72 @@
+@font-face {
+    font-family: Roboto;
+    src: url("fonts/Roboto-Regular.ttf")
+  }
+  @font-face {
+    font-family: Ubuntu;
+    src: url("fonts/Poppins-Regular.ttf")
+  }
+
+header {
+    width: 100%;
+    height: 60px;
+    padding-left: 4px;
+    padding: 6px;
+    background-color: #005C53;
+}
+
+body {
+    font-family: Roboto;
+    background-color: #D6D68E;
+}
+
+header button {
+  margin-right: 10px;
+}
+
+button, .btn {
+    width: 150px;
+    border: none;
+    font-family: Ubuntu;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #0FC131;
+}
+
+button:hover, .btn:hover {
+  background-color: #DBF227;
+}
+
+.input{
+  border: 2px solid #0FC131;
+  font-size: 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.rating {
+  display: inline;
+}
+
+.newpost, .editpost {
+  display: block;
+  max-width: 400px;
+  border: none;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+  background-color: #005C53;
+}
+
+.post {
+  display: block;
+  max-width: 80%;
+  height: 100px;
+  margin: auto;
+  background-color: #042940;
+}
