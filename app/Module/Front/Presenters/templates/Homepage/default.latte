@@ -2,18 +2,19 @@
 
 <div class="posts">
 {if $posts != null}
-    {foreach $posts as $post}
-        <div class="post">
-            {$post["language"]}
-            {$post["rating"]}
-            {$post["time"]}
-            {$post["datetime"]}
-            {$post["description"]}
-            <a n:href="deletePost! $post['id']">vymazat</a>
-            <a n:href="Edit:edit $post['id']">upravit</a>
+    {foreach $posts as $post}   
+        <div class="post col-5">
+            <h2>Jazyk: {$post["language"]}</h2>
+            <p>Hodnocení: {$post["rating"]}</p>
+            <p>Strávený čas: {$post["time"]}</p>
+            <p>Vytvořeno: {$post["datetime"]}</p>
+            <p>Popis: {$post["description"]}</p>
+            <a n:href="deletePost! $post['id']"><button class="btn-red">vymazat</button></a>
+            <a n:href="Edit:edit $post['id']"><button class="btn-blue">upravit</button></a>
+            <br>
         </div>
     {/foreach}
 {else}
-napište nový záznam
+Zatím žádné záznamy
 {/if}
 </div>

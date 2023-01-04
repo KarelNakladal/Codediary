@@ -33,6 +33,7 @@ button, .btn {
     border-radius: 5px;
     padding: 10px;
     background-color: #0FC131;
+    transition: ease 0.3s;
 }
 
 button:hover, .btn:hover {
@@ -52,7 +53,6 @@ button:hover, .btn:hover {
 }
 
 .newpost, .editpost {
-  display: block;
   max-width: 400px;
   border: none;
   border-radius: 10px;
@@ -65,8 +65,27 @@ button:hover, .btn:hover {
 
 .post {
   display: block;
-  max-width: 80%;
-  height: 100px;
-  margin: auto;
-  background-color: #042940;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  margin-top: 30px;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+  background-color: #005C53;
+}
+
+.btn-red {
+  background-color: rgb(250, 68, 68);
+}
+.btn-red:hover {
+  background-color: rgb(143, 0, 0);
+}
+
+.btn-blue {
+  background-color: rgb(66, 66, 250);
+
+}
+.btn-blue:hover {
+  background-color: rgb(17, 17, 139);
 }
