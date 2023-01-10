@@ -81,6 +81,7 @@ final class HomepagePresenter extends BaseFrontPresenter
         $this->redirect(":Front:Homepage:default");
        
     }
+    publuc function renderEdit($i)
 
     /*public function handleDeletePost($id){
         $this->postFacade->removeById($id);
