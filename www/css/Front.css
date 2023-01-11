@@ -6,6 +6,11 @@
     font-family: Ubuntu;
     src: url("fonts/Poppins-Regular.ttf")
   }
+  @font-face {
+    font-family: Logo;
+    src: url("fonts/Righteous-Regular.ttf")
+  }
+
 
 header {
     width: 100%;
@@ -39,7 +44,7 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-  background-color: var(--background);
+  background-color: var(--main);
 }
 
 .input{
@@ -104,4 +109,21 @@ button:hover, .btn:hover {
 .delete {
   background-color: red;
   color: white;
+}
+
+.logo {
+  margin-top: 5px;
+  width: 49%;
+  font-family: Logo;
+  font-size: 30px;
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+h3 {
+  color: white;
+  text-align:left;
+  margin-left: 20px;
 }

@@ -43,32 +43,34 @@ final class EditPresenter extends BaseFrontPresenter
 
 	$form->addSubmit("submit", "Zapsat !")
 		->setHtmlAttribute('class', 'btn');
-	$form->onSuccess[] = [$this,"PostFormSucceeded"];
+	$form->onSuccess[] = [$this,"postFormSucceeded"];
 	return $form;
 }
-public function PostFormSucceeded($form, $data): void
-{
-	$postId = $this->getParameter('postId');
+	public function postFormSucceeded($form, $data): void
+	{
 
-	if ($postId) {
-		$this->postFacade->update($postId, $data->language, $data->rating, $data->time, $data->description);
-	} else {
-		$this->postFacade->add($data->language, $data->rating, $data->time, $data->description);
+		$postId = $this->getParameter('id');
+
+		 if ($postId) {
+		 	$this->postFacade->update($postId, $data->language, $data->rating, $data->time, $data->description);
+		 } else {
+		 	$this->postFacade->add($data->language, $data->rating, $data->time, $data->description);
+		 }
+		$this->flashMessage('Příspěvek byl upraven', 'success');
+		$this->redirect('Homepage:default');
+
 	}
-	$this->flashMessage('Příspěvek byl upraven', 'success');
-	$this->redirect('Homepage:default');
+	public function renderEdit(int $id): void
+	{
 
-}
-public function renderEdit(int $id): void
-{
-
-	$post = $this->postFacade->getPostById($id);
-	if (!$post) {
-		$this->error('post not found');
-	}
-
-	$this->getComponent('postForm')
-		->setDefaults($post->toArray());
+		$post = $this->postFacade->getPostById($id);
+		if (!$post) {
+			$this->error('post not found');
+		}
+		$this->template->id = $id;
+		$this->getComponent('postForm')
+			->setDefaults($post->toArray());
 		$this->template->post = $post;
-}
+	}
+
 }

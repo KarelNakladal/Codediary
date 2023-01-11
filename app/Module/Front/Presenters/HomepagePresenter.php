@@ -29,11 +29,11 @@ final class HomepagePresenter extends BaseFrontPresenter
 
 		$grid = new DataGrid($this, $name);
 		$grid->setDataSource($data);
-		$grid->addColumnText('language', 'Language');
-		$grid->addColumnText('rating', 'Rating');
-		$grid->addColumnText('time', 'Time');
-        $grid->addColumnText('datetime', 'Datetime');
-        $grid->addColumnText('description', 'Description');
+		$grid->addColumnText('language', 'Jazyk');
+		$grid->addColumnText('rating', 'Hodnocení');
+		$grid->addColumnText('time', 'Čas v minutách');
+        $grid->addColumnText('datetime', 'Datum a čas vytvoření');
+        $grid->addColumnText('description', 'Popis');
         $grid->addAction('Homepage:show', 'Detail');
         $grid->addAction('delete', 'Smazat', 'delete!')
             ->setClass('btn btn-red');
@@ -81,11 +81,11 @@ final class HomepagePresenter extends BaseFrontPresenter
         $this->redirect(":Front:Homepage:default");
        
     }
-    publuc function renderEdit($i)
-
+    
+    //public function renderEdit($i)
     /*public function handleDeletePost($id){
         $this->postFacade->removeById($id);
-    }*/
+    }*/ 
 
     public function handleDelete(int $id): void
     {
