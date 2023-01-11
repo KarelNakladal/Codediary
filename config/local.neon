@@ -2,6 +2,6 @@ parameters:
 
 
 database:
-	dsn: 'mysql:host=127.0.0.1:3306;dbname=nette'
+	dsn: 'mysql:unix_socket=/run/mysqld/mysqld.sock;dbname=nette'
 	user: root
 	password:
