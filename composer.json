@@ -1,15 +1,11 @@
 {
-	"name": "nette-examples/user-authentication",
+	"name": "karelnakladal/codediary",
 	"type": "project",
 	"license": "BSD-3-Clause",
 	"authors": [
 		{
-			"name": "David Grudl",
-			"homepage": "https://davidgrudl.com"
-		},
-		{
-			"name": "Nette Community",
-			"homepage": "https://nette.org/contributors"
+			"name": "Kluci z IT Nory",
+			"homepage": "https://www.ossp.cz"
 		}
 	],
 	"require": {
